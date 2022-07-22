@@ -1,0 +1,43 @@
+23:50:10.805 [main] INFO  com.qa.factory.DriverFactory - ================ ********************** Chrome Broswer Launched *************************===============
+23:50:12.606 [main] INFO  com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:12.606 [main] DEBUG com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:12.606 [main] ERROR com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:12.606 [main] FATAL com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:12.613 [main] INFO  com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:12.613 [main] DEBUG com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:12.613 [main] ERROR com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:12.613 [main] FATAL com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:14.235 [main] INFO  com.qa.factory.DriverFactory - ================ ********************** Chrome Broswer Launched *************************===============
+23:50:16.370 [main] INFO  com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:16.370 [main] DEBUG com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:16.370 [main] ERROR com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:16.370 [main] FATAL com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:18.056 [main] INFO  com.qa.factory.DriverFactory - ================ ********************** Chrome Broswer Launched *************************===============
+23:50:19.334 [main] INFO  com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:19.334 [main] DEBUG com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:19.334 [main] ERROR com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:19.334 [main] FATAL com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:19.467 [main] INFO  com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:19.467 [main] DEBUG com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:19.467 [main] ERROR com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:19.467 [main] FATAL com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:21.189 [main] INFO  com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:21.189 [main] DEBUG com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:21.189 [main] ERROR com.qa.factory.DriverFactory - ****************   Maximized ***********************
+23:50:21.189 [main] FATAL com.qa.factory.DriverFactory - ****************   Maximized ***********************
+00:41:42.356 [main] INFO  com.qa.factory.DriverFactory - ================ ********************** Chrome Broswer Launched *************************===============
+00:41:44.540 [main] INFO  com.qa.factory.DriverFactory - ****************   Maximized ***********************
+00:41:44.540 [main] DEBUG com.qa.factory.DriverFactory - ****************   Maximized ***********************
+00:41:44.540 [main] ERROR com.qa.factory.DriverFactory - ****************   Maximized ***********************
+00:41:44.540 [main] FATAL com.qa.factory.DriverFactory - ****************   Maximized ***********************
+00:41:44.546 [main] INFO  com.qa.factory.DriverFactory - ****************   Maximized ***********************
+00:41:44.546 [main] DEBUG com.qa.factory.DriverFactory - ****************   Maximized ***********************
+00:41:44.546 [main] ERROR com.qa.factory.DriverFactory - ****************   Maximized ***********************
+00:41:44.546 [main] FATAL com.qa.factory.DriverFactory - ****************   Maximized ***********************
+00:41:46.191 [main] INFO  com.qa.factory.DriverFactory - ================ ********************** Chrome Broswer Launched *************************===============
+00:41:48.050 [main] INFO  com.qa.factory.DriverFactory - ****************   Maximized ***********************
+00:41:48.050 [main] DEBUG com.qa.factory.DriverFactory - ****************   Maximized ***********************
+00:41:48.050 [main] ERROR com.qa.factory.DriverFactory - ****************   Maximized ***********************
+00:41:48.050 [main] FATAL com.qa.factory.DriverFactory - ****************   Maximized ***********************
+00:41:49.833 [main] INFO  com.qa.factory.DriverFactory - ================ ********************** Chrome Broswer Launched *************************===============
+00:41:56.455 [main] INFO  com.qa.factory.DriverFactory - ****************   Maximized ***********************

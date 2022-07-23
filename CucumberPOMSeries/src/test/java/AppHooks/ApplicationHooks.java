@@ -13,41 +13,39 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
-public class ApplicationHooks  {
+public class ApplicationHooks {
 
 	private DriverFactory driverFactory;
 	private WebDriver driver;
-	private ConfigReader configReader;
 	Properties prop;
-	
-	
+
 // To skip scenarios from Hooks using Tags
-	//@Before(value = "@Skip", order = 0)
+	// @Before(value = "@Skip", order = 0)
 	public void skip_scenario(Scenario scenario) {
 		System.out.println("Skipped Scenario Name is :" + scenario.getName());
 		Assume.assumeTrue(false);
 	}
-	
+
 	@Before(order = 1)
 	public void getProperty() {
-		configReader = new ConfigReader();
-		prop = configReader.init_prop();
+		new ConfigReader();
+		prop = ConfigReader.init_prop();
 
 	}
 
 	@Before(order = 2)
 	public void launchBrowser() {
-		String browserName = prop.getProperty("browser");
+		// String browserName = prop.getProperty("browser");
 		driverFactory = new DriverFactory();
-		driver = driverFactory.init_Driver(browserName);
+		driver = driverFactory.init_Driver(prop);
 		try {
 			driver.get(ConfigReader.init_prop().getProperty("url"));
 			JavascriptExecutor jse = (JavascriptExecutor) driver;
 			jse.executeScript("document.body.style.zoom='100%'");
 		} catch (Exception e) {
 			e.printStackTrace();
-		}	
-		
+		}
+
 	}
 
 	@After(order = 0)
@@ -58,8 +56,8 @@ public class ApplicationHooks  {
 	@After(order = 1)
 	public void tearDown(Scenario scenario) {
 
-		if (scenario.isFailed()) { // take screenshot 
-			String screenshotName =	scenario.getName().replaceAll(" ", "_");
+		if (scenario.isFailed()) { // take screenshot
+			String screenshotName = scenario.getName().replaceAll(" ", "_");
 			byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(sourcePath, "image/png", screenshotName);
 		}

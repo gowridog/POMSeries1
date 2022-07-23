@@ -40,6 +40,8 @@ public class LoginPageSteps {
 		// in different browser
 		JavascriptExecutor jse = (JavascriptExecutor) DriverFactory.getDriver();
 		jse.executeScript("document.body.style.zoom='100%'");
+//		DriverFactory.getDriver().manage().window().maximize();
+		
 		Log4jHelper.info("****************   Maximized ***********************");
 		Log4jHelper.debug("****************   Maximized ***********************");
 		Log4jHelper.error("****************   Maximized ***********************");
@@ -71,14 +73,18 @@ public class LoginPageSteps {
 
 	@Then("forgot your password link should be displayed")
 	public void forgot_your_password_link_should_be_displayed() {
-
-		if (DriverFactory.getDriver().getPageSource().contains("Forgot your password?")) {
-			System.out.println("FOUND ========= > Forgot your password?");
-			System.out.println(DriverFactory.getDriver().getTitle());
-		} else {
-			System.out.println("NOT FOUND text in soruce of the page ====> Forgot your password?");
-			
-		}
+		/*
+		 * if
+		 * (DriverFactory.getDriver().getPageSource().contains("Forgot your password?"))
+		 * { System.out.println("FOUND ========= > Forgot your password?");
+		 * System.out.println(DriverFactory.getDriver().getTitle()); } else {
+		 * System.out.
+		 * println("NOT FOUND text in soruce of the page ====> Forgot your password?");
+		 * 
+		 * }
+		 */
+		String forgotPwdText = loginPage.isForgotPwdLinkText();
+		Assert.assertEquals(forgotPwdText, "Forgot your password??");
 		Assert.assertTrue(loginPage.isForgotPwdLinkExist());
 
 		// 2. Soft assertion declaration final step 

@@ -25,7 +25,7 @@ public class LoginPage {
 
 	private By password = By.id("passwd");
 	private By signInButton = By.name("SubmitLogin");
-	private By forgotPwdLink = By.linkText("Forgot *your password?");
+	private By forgotPwdLink = By.xpath("//a[@title='Recover your forgotten password']");
 	private By contactUsLink = By.linkText("Contact us");
 	
 
@@ -47,6 +47,10 @@ public class LoginPage {
 
 	public boolean isForgotPwdLinkExist() {
 		return driver.findElement(forgotPwdLink).isDisplayed();
+
+	}
+	public String isForgotPwdLinkText() {
+		return driver.findElement(forgotPwdLink).getText();
 
 	}
 	

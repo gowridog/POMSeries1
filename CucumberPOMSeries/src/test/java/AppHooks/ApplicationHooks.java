@@ -36,10 +36,12 @@ public class ApplicationHooks {
 	@Before(order = 2)
 	public void launchBrowser() {
 		// String browserName = prop.getProperty("browser");
+		System.out.println("------URL: "+ConfigReader.getURL());
 		driverFactory = new DriverFactory();
 		driver = driverFactory.init_Driver(prop);
 		try {
 			driver.get(ConfigReader.init_prop().getProperty("url"));
+			//driver.get(ConfigReader.getURL());
 			JavascriptExecutor jse = (JavascriptExecutor) driver;
 			jse.executeScript("document.body.style.zoom='100%'");
 		} catch (Exception e) {

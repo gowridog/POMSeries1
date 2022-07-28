@@ -40,6 +40,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -49,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jul 22, 2022 07:18:55 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Jul 28, 2022 02:15:22 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -65,6 +66,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -76,7 +78,12 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@Login</a></li>
+					<li><a href='#'>@accounts</a></li>
+					<li><a href='#'>@Smoke</a></li>
+					<li><a href='#'>@Regression</a></li>
 					<li><a href='#'>@ContactUs</a></li>
+					<li><a href='#'>@Skip</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -118,12 +125,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$33%'>
                     <span class='strong'>1</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='66%'>
+                    2</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -136,12 +143,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>2</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='71%'>
+                    <span class='strong'>5</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='28%'>
+                    2</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -156,14 +163,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>8</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='82%'>
+                    <span class='strong'>24</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='6%'>
+                    2</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='10%'>
+                    3</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -186,8 +193,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Contact Us Feature</span>
-						<span class='test-time'>Jul 22, 2022 07:18:56 PM</span>
+						<span class='test-name'>Account Page Feature</span>
+						<span class='test-time'>Jul 28, 2022 02:15:22 PM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -198,11 +205,100 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 
-<div class='scenario outline node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 15.679</span>
+	<span class='duration right label'>00 00 28.297</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Contact Us scenario with different set of data</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Accounts page title</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@accounts</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='5' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.AccountsPageSteps.user_has_already_logged_in_to_application(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user has already logged in to application</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>dec2020secondbatch@gmail.com</td><td>Selenium@12345</td></tr></table></div>
+		</li>
+		<li test-id='6' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.AccountsPageSteps.user_is_on_accounts_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Accounts page</div>
+
+
+		</li>
+		<li test-id='7' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.LoginPageSteps.user_gets_the_title_of_the_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user gets the title of the page</div>
+
+
+		</li>
+		<li test-id='8' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.LoginPageSteps.page_title_should_be(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then page title should be "My account - My Store"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='11' status='pass'>
+
+	<span class='duration right label'>00 00 14.776</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Accounts section count</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@accounts</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='14' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.AccountsPageSteps.user_has_already_logged_in_to_application(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user has already logged in to application</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>dec2020secondbatch@gmail.com</td><td>Selenium@12345</td></tr></table></div>
+		</li>
+		<li test-id='15' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.AccountsPageSteps.user_is_on_accounts_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Accounts page</div>
+
+
+		</li>
+		<li test-id='16' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.AccountsPageSteps.user_gets_accounts_section(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user gets accounts section</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>ORDER HISTORY AND DETAILS</td></tr><tr><td>MY CREDIT SLIPS</td></tr><tr><td>MY ADDRESSES</td></tr><tr><td>MY PERSONAL INFORMATION</td></tr><tr><td>MY WISHLISTS</td></tr><tr><td>Home</td></tr></table></div>
+		</li>
+		<li test-id='17' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.AccountsPageSteps.accounts_section_count_should_be(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And accounts section count should be 6</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>Contact Us Feature</span>
+						<span class='test-time'>Jul 28, 2022 02:16:06 PM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario outline node' test-id='21' status='fail'>
+
+	<span class='duration right label'>00 00 20.649</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Contact Us scenario with different set of data</div>
 	</div>
 	
 		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>SheetName</td><td>RowNumber</td></tr><tr><td>contactus</td><td>0</td></tr><tr><td>contactus</td><td>1</td></tr></table></div>
@@ -212,7 +308,7 @@
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='3' class='node scenario Pass' status='Pass'>
+		<li test-id='22' class='node scenario Pass' status='Pass'>
 			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Contact Us scenario with different set of data</div>
 
 				<div class='category-list'>
@@ -220,49 +316,235 @@
 				</div>
 
 			<ul class='gc steps'>
-				<li test-id='6' class='gc given Pass' status='Pass'>
+				<li test-id='25' class='gc given Pass' status='Pass'>
 					<h6 class="step-name" title="stepdefinition.ContactUsSteps.user_navigates_to_contact_us_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user navigates to contact us page</h6>
 
 				</li>
-				<li test-id='7' class='gc when Pass' status='Pass'>
+				<li test-id='26' class='gc when Pass' status='Pass'>
 					<h6 class="step-name" title="stepdefinition.ContactUsSteps.user_fills_the_form_from_given_sheetname_and_rownumber(java.lang.String,java.lang.Integer)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user fills the form from given sheetname "contactus" and rownumber 0</h6>
 
 				</li>
-				<li test-id='8' class='gc and Pass' status='Pass'>
+				<li test-id='27' class='gc and Pass' status='Pass'>
 					<h6 class="step-name" title="stepdefinition.ContactUsSteps.user_clicks_on_send_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on send button</h6>
 
 				</li>
-				<li test-id='9' class='gc then Pass' status='Pass'>
+				<li test-id='28' class='gc then Pass' status='Pass'>
 					<h6 class="step-name" title="stepdefinition.ContactUsSteps.it_shows_a_successful_message(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it shows a successful message "Your message has been successfully sent to our team."</h6>
 
 				</li>
 			</ul>
 		</li>
-		<li test-id='12' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Contact Us scenario with different set of data</div>
+		<li test-id='31' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Contact Us scenario with different set of data</div>
 
 				<div class='category-list'>
 						<span class='category label'>@ContactUs</span>
 				</div>
 
 			<ul class='gc steps'>
-				<li test-id='15' class='gc given Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinition.ContactUsSteps.user_navigates_to_contact_us_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user navigates to contact us page</h6>
+				<li test-id='34' class='gc given Fail' status='Fail'>
+					<h6 class="step-name" title="stepdefinition.ContactUsSteps.user_navigates_to_contact_us_page()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given user navigates to contact us page</h6>
 
+							<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Contact us"}
+  (Session info: chrome=103.0.5060.134)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-CK5HNK8F', ip: '192.168.1.145', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\jsrin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50186}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4298361a1cf66a00f100bebe3fb11eb3
+*** Element info: {Using=link text, value=Contact us}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at jdk.internal.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at com.sun.proxy.$Proxy21.findElement(Unknown Source)
+	at com.qa.util.EventHandler.beforeFindBy(EventHandler.java:86)
+	at jdk.internal.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:84)
+	at com.sun.proxy.$Proxy20.beforeFindBy(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:193)
+	at com.pages.LoginPage.contactUsLinkClick(LoginPage.java:58)
+	at stepdefinition.ContactUsSteps.user_navigates_to_contact_us_page(ContactUsSteps.java:27)
+	at ?.user navigates to contact us page(file:///C:/Users/jsrin/git/MytestGitRep1/CucumberPOMSeries/src/test/resources/AppFeatures/ContactUs.feature:6)
+</textarea>
 				</li>
-				<li test-id='16' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinition.ContactUsSteps.user_fills_the_form_from_given_sheetname_and_rownumber(java.lang.String,java.lang.Integer)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user fills the form from given sheetname "contactus" and rownumber 1</h6>
+				<li test-id='35' class='gc when Skip' status='Skip'>
+					<h6 class="step-name" title="stepdefinition.ContactUsSteps.user_fills_the_form_from_given_sheetname_and_rownumber(java.lang.String,java.lang.Integer)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When user fills the form from given sheetname "contactus" and rownumber 1</h6>
 
+							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='17' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinition.ContactUsSteps.user_clicks_on_send_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on send button</h6>
+				<li test-id='36' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="stepdefinition.ContactUsSteps.user_clicks_on_send_button()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user clicks on send button</h6>
 
+							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='18' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepdefinition.ContactUsSteps.it_shows_a_successful_message(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it shows a successful message "Your message has been successfully sent to our team."</h6>
+				<li test-id='37' class='gc then Skip' status='Skip'>
+					<h6 class="step-name" title="stepdefinition.ContactUsSteps.it_shows_a_successful_message(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then it shows a successful message "Your message has been successfully sent to our team."</h6>
 
+							<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='38' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">Contact_Us_scenario_with_different_set_of_data</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../embedded1.png' src='../embedded1.png'>
+							</div>
 				</li>
 			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='40'>
+					<div class='test-heading'>
+						<span class='test-name'>Login page feature</span>
+						<span class='test-time'>Jul 28, 2022 02:16:26 PM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='41' status='pass'>
+
+	<span class='duration right label'>00 00 08.904</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Login page title</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Login</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='44' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.LoginPageSteps.user_is_on_login_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on login page</div>
+
+
+		</li>
+		<li test-id='45' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.LoginPageSteps.user_gets_the_title_of_the_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user gets the title of the page</div>
+
+
+		</li>
+		<li test-id='46' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.LoginPageSteps.page_title_should_be(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then page title should be "Login - My Store"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='49' status='fail'>
+
+	<span class='duration right label'>00 00 05.991</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Forgot Password link</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Smoke</span>
+				<span class='category label'>@Login</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='52' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.LoginPageSteps.user_is_on_login_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on login page</div>
+
+
+		</li>
+		<li test-id='53' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(stepdefinition.LoginPageSteps.forgot_your_password_link_should_be_displayed())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then forgot your password link should be displayed</div>
+
+
+					<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<...orgot your password?[]> but was:<...orgot your password?[?]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepdefinition.LoginPageSteps.forgot_your_password_link_should_be_displayed(LoginPageSteps.java:87)
+	at ?.forgot your password link should be displayed(file:///C:/Users/jsrin/git/MytestGitRep1/CucumberPOMSeries/src/test/resources/AppFeatures/LoginPage.feature:13)
+</textarea>
+		</li>
+		<li test-id='54' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Forgot_Password_link</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../embedded2.png' src='../embedded2.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='56' status='pass'>
+
+	<span class='duration right label'>00 00 08.824</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Login with correct credentials</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Skip</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@Login</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='59' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.LoginPageSteps.user_is_on_login_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on login page</div>
+
+
+		</li>
+		<li test-id='60' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.LoginPageSteps.user_enters_username(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user enters username "dec2020secondbatch@gmail.com"</div>
+
+
+		</li>
+		<li test-id='61' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.LoginPageSteps.user_enters_password(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters password "Selenium@12345"</div>
+
+
+		</li>
+		<li test-id='62' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.LoginPageSteps.user_clicks_on_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Login button</div>
+
+
+		</li>
+		<li test-id='63' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.LoginPageSteps.user_gets_the_title_of_the_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user gets the title of the page</div>
+
+
+		</li>
+		<li test-id='64' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefinition.LoginPageSteps.page_title_should_be(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then page title should be "My account - My Store"</div>
+
+
 		</li>
 	</ul>
 </div>
@@ -310,14 +592,58 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@ContactUs</span>
+						<span class='category-name'>@Login</span>
 						<span class='category-status right'>
-						<span class='label pass'>3</span>
+						<span class='label pass'>2</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 28, 2022 02:16:26 PM</td>
+										<td class='linked' test-id='41'>Login page title</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 28, 2022 02:16:35 PM</td>
+										<td class='linked' test-id='49'>Forgot Password link</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 28, 2022 02:16:41 PM</td>
+										<td class='linked' test-id='56'>Login with correct credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@accounts</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -332,18 +658,162 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jul 22, 2022 07:18:56 PM</td>
-										<td class='linked' test-id='2'>Contact Us scenario with different set of data</td>
+										<td>Jul 28, 2022 02:15:22 PM</td>
+										<td class='linked' test-id='2'>Accounts page title</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jul 22, 2022 07:18:56 PM</td>
-										<td class='linked' test-id='3'>Contact Us scenario with different set of data</td>
+										<td>Jul 28, 2022 02:15:51 PM</td>
+										<td class='linked' test-id='11'>Accounts section count</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Smoke</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 28, 2022 02:16:26 PM</td>
+										<td class='linked' test-id='41'>Login page title</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Jul 22, 2022 07:19:03 PM</td>
-										<td class='linked' test-id='12'>Contact Us scenario with different set of data</td>
+										<td>Jul 28, 2022 02:16:35 PM</td>
+										<td class='linked' test-id='49'>Forgot Password link</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Regression</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 28, 2022 02:16:41 PM</td>
+										<td class='linked' test-id='56'>Login with correct credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@ContactUs</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 28, 2022 02:16:06 PM</td>
+										<td class='linked' test-id='21'>Contact Us scenario with different set of data</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 28, 2022 02:16:06 PM</td>
+										<td class='linked' test-id='22'>Contact Us scenario with different set of data</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 28, 2022 02:16:24 PM</td>
+										<td class='linked' test-id='31'>Contact Us scenario with different set of data</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Skip</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 28, 2022 02:16:41 PM</td>
+										<td class='linked' test-id='56'>Login with correct credentials</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -360,7 +830,134 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.junit.ComparisonFailure</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 28, 2022 02:16:40 PM</td>
+										<td class='linked' test-id='53'>Then forgot your password link should be displayed</td>
+										<td>
+											<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<...orgot your password?[]> but was:<...orgot your password?[?]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepdefinition.LoginPageSteps.forgot_your_password_link_should_be_displayed(LoginPageSteps.java:87)
+	at ?.forgot your password link should be displayed(file:///C:/Users/jsrin/git/MytestGitRep1/CucumberPOMSeries/src/test/resources/AppFeatures/LoginPage.feature:13)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 28, 2022 02:16:25 PM</td>
+										<td class='linked' test-id='34'>Given user navigates to contact us page</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Contact us"}
+  (Session info: chrome=103.0.5060.134)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-CK5HNK8F', ip: '192.168.1.145', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\jsrin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50186}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4298361a1cf66a00f100bebe3fb11eb3
+*** Element info: {Using=link text, value=Contact us}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at jdk.internal.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at com.sun.proxy.$Proxy21.findElement(Unknown Source)
+	at com.qa.util.EventHandler.beforeFindBy(EventHandler.java:86)
+	at jdk.internal.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:84)
+	at com.sun.proxy.$Proxy20.beforeFindBy(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:193)
+	at com.pages.LoginPage.contactUsLinkClick(LoginPage.java:58)
+	at stepdefinition.ContactUsSteps.user_navigates_to_contact_us_page(ContactUsSteps.java:27)
+	at ?.user navigates to contact us page(file:///C:/Users/jsrin/git/MytestGitRep1/CucumberPOMSeries/src/test/resources/AppFeatures/ContactUs.feature:6)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -368,37 +965,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>7</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>8</div>
+					<div class='panel-lead'>29</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jul 22, 2022 07:18:55 PM</div>
+					<div class='panel-lead'>Jul 28, 2022 02:15:22 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jul 22, 2022 07:19:12 PM</div>
+			 		<div class='panel-lead'>Jul 28, 2022 02:16:50 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 16.235</div>
+					<div class='panel-lead'>00 01 28.094</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -442,8 +1039,53 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
+							<td>@Login</td>
+							<td>2</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									66.667%
+							</td>
+						</tr>
+						<tr>
+							<td>@accounts</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Smoke</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
+						<tr>
+							<td>@Regression</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
 							<td>@ContactUs</td>
-							<td>3</td>
+							<td>1</td>
+							<td>2</td>
+							<td>0</td>
+							<td>
+									33.333%
+							</td>
+						</tr>
+						<tr>
+							<td>@Skip</td>
+							<td>1</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -461,35 +1103,35 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
+                parentCount: 3,
 				passParent: 1,
-				failParent: 0,
+				failParent: 2,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 2,
-				passChild: 2,
-				failChild: 0,
+				childCount: 7,
+				passChild: 5,
+				failChild: 2,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 8,
-				passGrandChild: 8,
-				failGrandChild: 0,
+				grandChildCount: 29,
+				passGrandChild: 24,
+				failGrandChild: 2,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 3,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Contact Us Feature":15.681
+			        "Account Page Feature":43.088,"Contact Us Feature":20.649,"Login page feature":23.734
 			};
 		</script>
 		

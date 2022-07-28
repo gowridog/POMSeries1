@@ -37,7 +37,7 @@ public class OptionsManager {
 			//fo.setBrowserVersion(prop.getProperty("browserversion"));
 		}
 		if(Boolean.parseBoolean(prop.getProperty("headless"))) fo.setHeadless(true);
-		if(Boolean.parseBoolean(prop.getProperty("incognito"))) fo.addArguments("--incognito");
+		if(Boolean.parseBoolean(prop.getProperty("incognito"))) fo.addArguments("-private");
 		return fo;
 	}
 
